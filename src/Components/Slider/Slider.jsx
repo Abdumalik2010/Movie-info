@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css";
 import { Link } from "react-router-dom";
 import { imageW500 } from "../../utils/ImageUrl";
 const Slider = ({ data, ganresData }) => {
@@ -20,10 +21,10 @@ const Slider = ({ data, ganresData }) => {
             }}
             autoplay={{
               delay: 2500,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             }}
           >
-            {data?.results.map((item) => {
+            {data?.results.map((item, idx) => {
               const luboy = item?.genre_ids;
               const filteredList = luboy.map((item) =>
                 ganresData?.genres?.find((ganresId) => ganresId?.id === item)
@@ -38,7 +39,7 @@ const Slider = ({ data, ganresData }) => {
                         {item?.overview?.length > 65 &&
                           item?.overview?.slice(0, 65) + "..."}
                       </p>
-                      <div className="slide_calendar" key={item?.id}>
+                      <div className="slide_calendar" key={idx}>
                         <p>{item?.release_date}</p>
                         {filteredList.map((item) => (
                           <p key={item?.id}>

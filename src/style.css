@@ -58,7 +58,7 @@ li {
   border-radius: 10px;
   overflow: hidden;
   transition: 0.5s;
-  border: 2px solid orange;
+  border: 2px solid rgb(96, 66, 11);
   background: transparent;
   transition: 0.3s;
 }
@@ -75,6 +75,7 @@ li {
   margin-top: 20px;
   width: auto;
   height: 450px;
+  display: flex;
 }
 .rated_slides img {
   border-radius: 10px;

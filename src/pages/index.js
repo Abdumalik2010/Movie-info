@@ -1,4 +1,5 @@
 import HomePage from "./Home/HomePage";
-import AboutPage from "./About/AboutPage";
+import MoviePage from "./Movie/MoviePage";
 import InfoPage from "./Info/InfoPage";
-export { HomePage, AboutPage, InfoPage };
+import SearchPage from "./Search/Search.jsx";
+export { HomePage, MoviePage, InfoPage, SearchPage };
